@@ -30,7 +30,7 @@
 }
 - (IBAction)goAction:(id)sender {
     
-    SecondViewController *secondVC = [[SecondViewController alloc] init];
+    SecondViewController *secondVC = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"SecondViewController"];
     secondVC.transitioningDelegate = self;
     [self presentViewController:secondVC animated:YES completion:nil];
     
